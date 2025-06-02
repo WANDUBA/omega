@@ -1,0 +1,276 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&display=swap');
+
+* { box-sizing: border-box; }
+
+html {
+    font-size: 18px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url(../imagens/textura-fundo.png);
+    background-attachment: fixed;
+    font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+img { max-width: 100%; }
+
+iframe { width: 100%; }
+
+body, h1, h2, h3, p, figure {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#contato a { 
+    color: blue;
+}
+#contato a:hover , #contato a:focus {
+    text-decoration: underline;
+}
+
+header, footer {
+    background-color: whitesmoke;
+    text-align: center;
+}
+
+header {
+    border-bottom: solid 1px;
+    margin-bottom: 8px;
+}
+
+footer {
+    border-top: solid 1px;
+}
+
+main {
+    width: 95%;
+    margin: auto;
+}
+
+article {
+    background-color: white;
+    box-shadow: grey 1px 1px 5px;
+    margin-bottom: 8px;
+    padding: 8px;
+}
+
+h1, nav, h2, h3, button, article:first-child p {
+    font-family: Orbitron, Verdana, san-serif;
+}
+
+h2, h3, p {
+    padding: 1% 0;
+}
+
+article:first-child {
+    background-image: url(../imagens/earth.jpg);
+    height: 500px;
+    background-attachment: fixed;
+    background-position: top center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 0;
+
+}
+
+article:first-child h2, article:first-child p {
+    width: 100%;
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.468);
+    margin: 8px 0;
+    padding: 2%;
+    border-top: solid 1px;
+    border-bottom: solid 1px;
+
+    animation-name: aparecer;
+    animation-duration: 1s;
+}
+
+article:first-child h2 {
+    font-size: 64px;
+}
+
+article:first-child p {
+    font-size: 24px;
+}
+
+/* Regra de animação */
+@keyframes aparecer {
+    from { 
+        opacity: 0;
+        /* transform: rotate(0) scale(1.5); */
+        /* color: green; */
+}
+    to { 
+        opacity: 1;
+        /* transform: rotate(360deg) */
+     }
+}
+
+footer img {
+    width: 50px;
+}
+
+footer h2 {
+    font-size: 1.2rem;
+}
+
+footer p {
+    font-size: 0.8rem;
+}
+
+section, figure {
+    margin: 40px 0;
+}
+
+figure {
+    text-align: center;
+}
+
+figcaption {
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+/* Regras temporárias para facilitar a visualização dos ajustes de espaços e alinhamentos */
+/* h1 {
+    background-color: red;
+}
+h1 a {
+    background-color: green;
+}
+nav {
+    background-color: yellow;
+}
+
+nav a {
+    background-color: lightblue;
+} */
+
+h1, h1 a, nav, nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    padding: 5px 0;
+    font-size: 1.8rem;
+    letter-spacing: 4px;
+}
+
+h1 a {
+    background-color: black;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+nav a {
+    height: 60px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+nav a:hover, nav a:focus {
+    background-color: rgba(0, 0, 0, 0.815);
+    color: white;
+    text-shadow: black 1px 1px;
+}
+
+input, textarea {
+    border: solid 2px;
+    width: 100%;
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+label {
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+button {
+    border: none;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    letter-spacing: 4px;
+}
+
+button:hover, button:focus {
+    background-color: darkblue;
+    cursor: pointer;
+}
+
+#voltar a {
+    background-color: black;
+    color: white;
+    padding: 8px;
+    font-size: 0.7rem;
+}
+#voltar a:hover, #voltar a:focus {
+    background-color: darkblue;
+}
+
+#voltar {
+    position: fixed;
+    /* top, botton. left. right, z-index */
+    bottom: 6px;
+    right: 6px;
+}
+
+/* Media Query */
+@media screen and (min-width: 710px) {
+    .container {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin: auto;
+    }
+}
+@media screen and (min-width: 750px) {
+    .grupo {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    .grupo section, .grupo figure {
+        width: 49%;
+        margin-top: 6px;
+        margin-bottom: 6px;
+    }
+}
+@media screen and (min-width: 1000px) {
+    header {
+        position: sticky;
+        top: 0;
+        height: 100px;
+        display: flex;
+        align-items: center;
+    }
+    #voltar {
+        display: none;
+    }
+    #o-que-fazemos, #nossas-equipes, #contato {
+        scroll-margin-top: 110px;
+    }
+    .container,main {
+        max-width: 1000px;
+    }
+    html {
+        font-size: 20px;
+    }
+}
