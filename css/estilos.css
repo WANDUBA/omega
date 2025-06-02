@@ -90,8 +90,8 @@ article:first-child h2, article:first-child p {
     background-color: rgba(0, 0, 0, 0.468);
     margin: 8px 0;
     padding: 2%;
-    border-top: solid 1px;
-    border-bottom: solid 1px;
+    border-top: solid 4px;
+    border-bottom: solid 4px;
 
     animation-name: aparecer;
     animation-duration: 1s;
