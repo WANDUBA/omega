@@ -217,8 +217,10 @@ button:hover, button:focus {
 #voltar a {
     background-color: black;
     color: white;
-    padding: 8px;
-    font-size: 0.7rem;
+    padding: 0px 4px 3px 5px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    border-radius: 50%;
 }
 #voltar a:hover, #voltar a:focus {
     background-color: darkblue;
@@ -229,6 +231,15 @@ button:hover, button:focus {
     /* top, botton. left. right, z-index */
     bottom: 6px;
     right: 6px;
+    opacity: 0;                /* começa invisível */
+    pointer-events: none;      /* não clica quando invisível */
+    transition: opacity 0.4s;  /* tempo da transição */
+}
+
+#voltar.show {
+    opacity: 1;                
+    pointer-events: auto;      /* só clica quando visível */
+    
 }
 
 /* Media Query */
@@ -261,16 +272,17 @@ button:hover, button:focus {
         display: flex;
         align-items: center;
     }
-    #voltar {
-        display: none;
-    }
-    #o-que-fazemos, #nossas-equipes, #contato {
-        scroll-margin-top: 110px;
-    }
-    .container,main {
-        max-width: 1000px;
-    }
-    html {
-        font-size: 20px;
+/* #voltar {
+    display: none;
+} */
+
+#o-que-fazemos, #nossas-equipes, #contato {
+    scroll-margin-top: 110px;
+}
+.container,main {
+    max-width: 1000px;
+}
+html {
+    font-size: 20px;
     }
 }
