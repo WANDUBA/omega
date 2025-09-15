@@ -218,7 +218,7 @@ button:hover, button:focus {
   background-color: black;
   color: white;
 	/*padding: 8px;*/
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   text-decoration: none;
 
   display: flex;
@@ -299,6 +299,7 @@ html {
     font-size: 20px;
     }
 }
+
 
 
 
