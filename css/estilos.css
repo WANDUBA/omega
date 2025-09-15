@@ -215,31 +215,44 @@ button:hover, button:focus {
 }
 
 #voltar a {
-    background-color: black;
-    color: white;
-    padding: 3px 4px 3px 5px;
-    font-size: 1.5rem;
-    text-decoration: none;
-    border-radius: 50%;
+  background-color: black;
+  color: white;
+	/*padding: 8px;*/
+  font-size: 1.2rem;
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;        /* deixa circular */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+
+  transition: background-color 0.3s, transform 0.3s;
 }
-#voltar a:hover, #voltar a:focus {
-    background-color: darkblue;
+
+#voltar a:hover,
+#voltar a:focus {
+  background-color: darkblue;
+  transform: scale(1.1);     /* efeito ao passar o mouse */
 }
 
 #voltar {
-    position: fixed;
-    /* top, botton. left. right, z-index */
-    bottom: 6px;
-    right: 6px;
-    opacity: 0;                /* começa invisível */
-    pointer-events: none;      /* não clica quando invisível */
-    transition: opacity 0.4s;  /* tempo da transição */
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+
+  opacity: 0;                /* começa invisível */
+  pointer-events: none;      /* não clica quando invisível */
+  transition: opacity 0.4s;  /* tempo da transição */
 }
 
 #voltar.show {
-    opacity: 1;                
-    pointer-events: auto;      /* só clica quando visível */
-    
+  opacity: 1;                
+  pointer-events: auto;      /* só clica quando visível */
 }
 
 /* Media Query */
@@ -286,5 +299,6 @@ html {
     font-size: 20px;
     }
 }
+
 
 
